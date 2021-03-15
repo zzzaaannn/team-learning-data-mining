@@ -25,8 +25,41 @@ y is continuous
                     color="r",alpha=0.6)  #x和y变量的关系图
     plt.title("Price~NOX")
     plt.show()
-
+    
 
 
 # Classification(分类)
 y is discrete
+通过特征来预测属于哪一个类别
+
+    from sklearn import datasets
+    iris = datasets.load_iris()
+    X = iris.data
+    y = iris.target
+    features = iris.feature_names
+    iris_data = pd.DataFrame(X,columns=features)
+    iris_data['target'] = y
+   
+   #可视化三类
+    marker = ['s','x','o']
+    for index,c in enumerate(np.unique(y)):
+        plt.scatter(x=iris_data.loc[y==c,"sepal length (cm)"],
+                    y=iris_data.loc[y==c,"sepal width (cm)"],
+                    alpha=0.8,
+                    label=c,
+                    marker=marker[c])
+    plt.xlabel("sepal length (cm)")
+    plt.ylabel("sepal width (cm)")
+    plt.legend()
+    plt.show()
+
+# Unsupervised Learning
+sklearn可以生成数据集
+API-Samples generator：https://scikit-learn.org/stable/modules/classes.html?highlight=datasets#module-sklearn.datasets
+
+    #生成符合正态分布的聚类数据 make_blobs
+    from sklearn import datasets
+    x, y = datasets.make_blobs(n_samples=5000, n_features=2, centers=3) #2个特征，3类
+    for index,c in enumerate(np.unique(y)):
+        plt.scatter(x[y==c, 0], x[y==c, 1],s=7)
+    plt.show()
