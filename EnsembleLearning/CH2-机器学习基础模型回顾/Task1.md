@@ -55,6 +55,7 @@ y is discrete
 
 # Unsupervised Learning
 sklearn可以生成数据集
+
 API-Samples generator：https://scikit-learn.org/stable/modules/classes.html?highlight=datasets#module-sklearn.datasets
 
     #生成符合正态分布的聚类数据 make_blobs
