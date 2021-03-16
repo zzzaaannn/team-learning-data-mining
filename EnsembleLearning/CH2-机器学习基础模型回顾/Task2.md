@@ -14,6 +14,7 @@
 - MSE均方误差：measure the average of the squares of the errors
 
     $\text{MSE}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} (y_i - \hat{y}_i)^2.$
+    ![equation](https://latex.codecogs.com/gif.latex?\text{MSE}(y,&space;\hat{y})&space;=&space;\frac{1}{n_\text{samples}}&space;\sum_{i=0}^{n_\text{samples}&space;-&space;1}&space;(y_i&space;-&space;\hat{y}_i)^2.)
 
     assign more weight to the bigger errors
 
