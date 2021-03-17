@@ -52,4 +52,24 @@
 
 API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics
 
-## Step 3: 
+## Step 3: select the model
+
+### Linear Regression
+
+    - 回归最初的概念：趋于“平均” 
+
+    - 一种预测性的建模技术，研究的是因变量（目标）和自变量（特征）之间的关系
+
+    - 通常用于预测分析，时间序列模型以及发现变量之间的因果关系
+
+    - 使用曲线/线来拟合数据点，目标是使曲线到数据点的距离差异最小
+
+#### 推算方法
+
+1. Least Squares
+
+![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)
+
+
+
+
