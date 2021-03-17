@@ -68,11 +68,11 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 
 1. Least Squares
 
-![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)\
+![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)  
 
-![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;argmin\;L(w))\
+![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;argmin\;L(w))  
 
-![equation](https://latex.codecogs.com/gif.latex?\frac{\partial&space;L(w)}{\partial&space;w}&space;=&space;2X^TXw-2X^TY&space;=&space;0)\
+![equation](https://latex.codecogs.com/gif.latex?\frac{\partial&space;L(w)}{\partial&space;w}&space;=&space;2X^TXw-2X^TY&space;=&space;0)  
 
-![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;(X^TX)^{-1}X^TY)\
+![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;(X^TX)^{-1}X^TY)  
 
