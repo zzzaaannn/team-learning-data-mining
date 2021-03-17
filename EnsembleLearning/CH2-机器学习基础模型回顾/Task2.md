@@ -35,7 +35,7 @@
 
 - 解释方差得分: measure the proportion to which a model accounts for the variation of a given data set
     
-    ![equation](https://latex.codecogs.com/gif.latex?explained\_{}variance(y,&space;\hat{y})&space;=&space;1&space;-&space;\frac{Var\{&space;y&space;-&space;\hat{y}\}}{Var\{y\}}.)
+    ![equation](https://latex.codecogs.com/gif.latex?explained\_{}variance(y,&space;\hat{y})&space;=&space;1&space;-&space;\frac{Var\{&space;y&space;-&space;\hat{y}\}}{Var\{y\}})
 
 
 ### sklearn的调用
@@ -71,5 +71,5 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 ![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)
 
 
-
+![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;argmin\;L(w))
 
