@@ -27,7 +27,7 @@
 
     a linear score which means that all the individual differences are weighted equally in the average
 
-- $R^2$决定系数：
+- R^2决定系数：
 
     ![equation](https://latex.codecogs.com/gif.latex?R^2(y,&space;\hat{y})&space;=&space;1&space;-&space;\frac{\sum_{i=1}^{n}&space;(y_i&space;-&space;\hat{y}_i)^2}{\sum_{i=1}^{n}&space;(y_i&space;-&space;\bar{y})^2}.)
 
@@ -35,7 +35,7 @@
 
 - 解释方差得分: measure the proportion to which a model accounts for the variation of a given data set
     
-    ![equation](https://latex.codecogs.com/svg.latex?explained\_{}variance(y,&space;\hat{y})&space;=&space;1&space;-&space;\frac{Var\{&space;y&space;-&space;\hat{y}\}}{Var\{y\}})
+    ![equation](https://latex.codecogs.com/gif.latex?explained\_variance(y,&space;\hat{y})&space;=&space;1&space;-&space;\frac{Var\(&space;y&space;-&space;\hat{y}\)}{Var\(y)})
 
 
 ### sklearn的调用
