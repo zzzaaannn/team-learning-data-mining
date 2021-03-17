@@ -73,8 +73,11 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 solve it by taking the minimum
 ![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;argmin\;L(w))  
 
+
 take the derivative
 ![equation](https://latex.codecogs.com/gif.latex?\frac{\partial&space;L(w)}{\partial&space;w}&space;=&space;2X^TXw-2X^TY&space;=&space;0)  
 
+
 ![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;(X^TX)^{-1}X^TY)  
+
 
