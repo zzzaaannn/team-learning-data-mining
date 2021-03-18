@@ -161,14 +161,16 @@ API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
 - 对落入区域R_j的每个观测值作相同的预测，预测值等于R_j上训练集的因变量的简单算术平均。 
 
 如下图所示，假如我们想要对楼内居民的年龄进行回归，将楼划分为3个区域 R1 , R2 , R3(红线),那么 R1的输出就是第一列四个居民年龄的平均值, R2的输出就是第二列四个居民年龄的平均值， R3的输出就是第三、四列八个居民年龄的平均值。
-![image](./1.png)
+![image](./2.png)
 
 1. 选择最优切分特征j与该特征上的最优切分点s
-遍历特征j以及固定j后遍历切分点s，选择使得下式最小的(j,s)
+
+- 遍历特征j以及固定j后遍历切分点s，选择使得下式最小的(j,s)
+- 用选定的(j,s)划分区域，并决定输出值
 
 ![equation](https://latex.codecogs.com/gif.latex?min_{j,s}[min_{c_1}\sum\limits_{x_i\in&space;R_1(j,s)}(y_i-c_1)^2&space;&plus;&space;min_{c_2}\sum\limits_{x_i\in&space;R_2(j,s)}(y_i-c_2)^2&space;])
 
-
+2. 
 
 
 
