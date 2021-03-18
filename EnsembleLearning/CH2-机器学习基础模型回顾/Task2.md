@@ -91,11 +91,12 @@ take the derivative
 
 当数据存在非线性关系时，我们使用线性回归模型进行预测会导致预测性能极其低下，因为模型的形式本身是线性的，无法表达数据中的非线性关系.
 
-solution: 多项式回归
+**solution1**: 多项式回归
 
 ![equation](https://latex.codecogs.com/gif.latex?y_i&space;=&space;w_0&space;&plus;&space;w_1x_i&space;&plus;&space;w_2x_i^2&space;&plus;&space;...&plus;w_dx_i^d&space;&plus;&space;\epsilon)
 
 对于多项式的阶数d不能取过大，一般不大于3或者4，因为d越大，多项式曲线就会越光滑，在X的边界处有异常的波动。（图中的边界处的4阶多项式拟合曲线的置信区间(虚线表示置信区间)明显增大，预测效果的稳定性下降。）  
 
+![image](./1.6.1.png)![image](./1.6.2.png)
 
 
