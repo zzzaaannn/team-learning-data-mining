@@ -64,7 +64,7 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 
     - 使用曲线/线来拟合数据点，目标是使曲线到数据点的距离差异最小
 
-#### Least Squares
+#### Ordinary Least Squares
 
 ![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)  
 
@@ -99,6 +99,9 @@ take the derivative
 
 ![image](./1.6.1.png)![image](./1.6.2.png)
 
+left: d<=4,曲线代表的置信区间较稳定
+right: d>4,曲线代表的置信区间明显增大
+
 **sklearn的调用**
 API-polynomial: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html?highlight=poly#sklearn.preprocessing.PolynomialFeatures
 
@@ -115,6 +118,37 @@ For example, if an input sample is two dimensional and of the form [a, b], the d
 [[1. 1. 2. 1. 2. 4.]]
 [[1. 1. 2. 2.]]
 ```
+
+**solution2**: GAM(广义可加模型) Generalized Additive Model
+
+an extension of generalized linear models
+
+![image](./1.png)
+
+identify the link of the predictor and variables
+
+![equation](https://latex.codecogs.com/gif.latex?y_i&space;=&space;w_0&space;&plus;&space;\sum\limits_{j=1}^{p}f_{j}(x_{ij})&space;&plus;&space;\epsilon_i)
+
+- 本质是线性模型推广至非线性模型的一个框架，在这个框架中，每一个变量都用一个非线性函数来代替
+
+- 模型本身保持整体可加性
+
+- 线性回归、线性分类模型都可适用
+
+- additive nature allows us to explore and interpret individual features by holding others at their mean
+ref: https://codeburst.io/pygam-getting-started-with-generalized-additive-models-in-python-457df5b4705f
+
+**sklearn的调用**
+API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
+(GAM,LinearGAM,GammaGAM,InvGaussGAM,LogisticGAM,PoissonGAM,ExpectileGAM)
+
+    from pygam import LinearGAM
+    gam = LinearGAM().fit(X, y)
+    gam.summary()
+    gam.coef_
+
+
+
 
 
 
