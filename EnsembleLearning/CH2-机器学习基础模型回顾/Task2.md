@@ -64,9 +64,7 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 
     - 使用曲线/线来拟合数据点，目标是使曲线到数据点的距离差异最小
 
-#### 推算方法
-
-1. Least Squares
+#### Least Squares
 
 ![equation](https://latex.codecogs.com/gif.latex?L(w)&space;=&space;\sum\limits_{i=1}^{N}||w^Tx_i-y_i||_2^2=\sum\limits_{i=1}^{N}(w^Tx_i-y_i)^2&space;=&space;(w^TX^T-Y^T)(w^TX^T-Y^T)^T&space;=&space;w^TX^TXw&space;-&space;2w^TX^TY&plus;YY^T)  
 
@@ -79,5 +77,25 @@ take the derivative
 
 
 ![equation](https://latex.codecogs.com/gif.latex?\hat{w}&space;=&space;(X^TX)^{-1}X^TY)  
+
+
+#### sklearn的调用
+    from sklearn import linear_model    #引入线性回归方法
+    linear_reg = linear_model.LinearRegression()    #创建线性回归的类
+    linear_reg.fit(X,y)      #输入特征X和因变量y进行训练
+    print("coefficient:", linear_reg.coef_)     #输出模型的系数
+    print("score:", linear_reg.score(X,y))      #输出模型的评判标准得分,决定系数R^2
+
+
+#### Disadvantage of linear regression
+
+当数据存在非线性关系时，我们使用线性回归模型进行预测会导致预测性能极其低下，因为模型的形式本身是线性的，无法表达数据中的非线性关系.
+
+solution: 多项式回归
+
+![equation](https://latex.codecogs.com/gif.latex?y_i&space;=&space;w_0&space;&plus;&space;w_1x_i&space;&plus;&space;w_2x_i^2&space;&plus;&space;...&plus;w_dx_i^d&space;&plus;&space;\epsilon)
+
+对于多项式的阶数d不能取过大，一般不大于3或者4，因为d越大，多项式曲线就会越光滑，在X的边界处有异常的波动。（图中的边界处的4阶多项式拟合曲线的置信区间(虚线表示置信区间)明显增大，预测效果的稳定性下降。）  
+
 
 
