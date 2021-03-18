@@ -170,9 +170,41 @@ API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
 
 ![equation](https://latex.codecogs.com/gif.latex?min_{j,s}[min_{c_1}\sum\limits_{x_i\in&space;R_1(j,s)}(y_i-c_1)^2&space;&plus;&space;min_{c_2}\sum\limits_{x_i\in&space;R_2(j,s)}(y_i-c_2)^2&space;])
 
-2. 
+2. 按照(j,s)分区域R_j
 
+3. 继续调用步骤1，2直到满足停止条件，就是每个区域的样本数小于等于5
 
+4. 将特征空间划分为J个不同的区域，生成回归树
+
+**回归树与线性模型的比较**
+如果特征变量与因变量的关系能很好的用线性关系来表达，那么线性回归通常有着不错的预测效果，拟合效果则优于不能揭示线性结构的回归树。
+
+反之，如果特征变量与因变量的关系呈现高度复杂的非线性，那么树方法比传统方法更优。
+
+**树模型的优缺点**
+- 树模型的解释性强，在解释性方面可能比线性回归还要方便。
+- 树模型更接近人的决策方式。
+- 树模型可以用图来表示，非专业人士也可以轻松解读。
+- 树模型可以直接做定性的特征而不需要像线性回归一样哑元化。
+- 树模型能很好处理缺失值和异常值，对异常值不敏感，但是这个对线性模型来说却是致命的。
+- 树模型的预测准确性一般无法达到其他回归模型的水平，但是改进的方法很多。
+
+**sklearn的调用**
+API-DecisionTressRegressor: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html?highlight=tree#sklearn.tree.DecisionTreeRegressor
+
+parameters: 
+- criterion: loss function
+- splitter: The strategy used to choose the split at each node. 
+- max_depth: The maximum depth of the tree
+- min_samples_split: The minimum number of samples required to split an internal node
+
+    from sklearn.tree import DecisionTreeRegressor    
+    reg_tree = DecisionTreeRegressor(criterion = "mse")
+    reg_tree.fit(X,y)
+    reg_tree.score(X,y)
+    cross_val_score(regressor, X, y, cv=10)
+
+### SVR 支持向量机回归
 
 
 
