@@ -56,13 +56,13 @@ API-evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html#re
 
 ### Linear Regression
 
-    - 回归最初的概念：趋于“平均” 
+- 回归最初的概念：趋于“平均” 
 
-    - 一种预测性的建模技术，研究的是因变量（目标）和自变量（特征）之间的关系
+- 一种预测性的建模技术，研究的是因变量（目标）和自变量（特征）之间的关系
 
-    - 通常用于预测分析，时间序列模型以及发现变量之间的因果关系
+- 通常用于预测分析，时间序列模型以及发现变量之间的因果关系
 
-    - 使用曲线/线来拟合数据点，目标是使曲线到数据点的距离差异最小
+- 使用曲线/线来拟合数据点，目标是使曲线到数据点的距离差异最小
 
 #### Ordinary Least Squares
 
@@ -198,11 +198,13 @@ parameters:
 - max_depth: The maximum depth of the tree
 - min_samples_split: The minimum number of samples required to split an internal node
 
+
     from sklearn.tree import DecisionTreeRegressor    
     reg_tree = DecisionTreeRegressor(criterion = "mse")
     reg_tree.fit(X,y)
     reg_tree.score(X,y)
     cross_val_score(regressor, X, y, cv=10)
+
 
 ### SVR 支持向量机回归
 
