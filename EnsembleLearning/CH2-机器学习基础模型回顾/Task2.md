@@ -198,13 +198,13 @@ parameters:
 - max_depth: The maximum depth of the tree
 - min_samples_split: The minimum number of samples required to split an internal node
 
-
+```python
     from sklearn.tree import DecisionTreeRegressor    
     reg_tree = DecisionTreeRegressor(criterion = "mse")
     reg_tree.fit(X,y)
     reg_tree.score(X,y)
     cross_val_score(regressor, X, y, cv=10)
-
+```
 
 ### SVR 支持向量机回归
 
