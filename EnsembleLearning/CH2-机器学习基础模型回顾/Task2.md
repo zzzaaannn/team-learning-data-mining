@@ -99,4 +99,25 @@ take the derivative
 
 ![image](./1.6.1.png)![image](./1.6.2.png)
 
+**sklearn的调用**
+API-polynomial: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html?highlight=poly#sklearn.preprocessing.PolynomialFeatures
+
+For example, if an input sample is two dimensional and of the form [a, b], the degree-2 polynomial features are [1, a, b, a^2, ab, b^2].
+
+    from sklearn.preprocessing import PolynomialFeatures    #generate polynomial and interaction features
+    X = [[1,2]]
+    poly = PolynomialFeatures(2)
+    print(poly.fit_transform(X))
+    poly2 = PolynomialFeatures(2,interaction_only = True)
+    print(poly2.fit_transform(X))
+
+```python
+[[1. 1. 2. 1. 2. 4.]]
+[[1. 1. 2. 2.]]
+```
+
+
+
+
+
 
