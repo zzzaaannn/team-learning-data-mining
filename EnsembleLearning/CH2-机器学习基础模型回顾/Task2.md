@@ -150,7 +150,24 @@ API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
 
 ### Regression Tree 回归树
 
-依据分层和分割的方式将特征空间划分为一系列简单的区域
+- 依据分层和分割的方式将特征空间划分为一系列简单的区域
+
+- 将空间用超平面进行划分的一种方法，每次分割，都将当前的空间一分为二，这样使得每一个叶子节点都是在空间中的一个不相交的区域
+
+**步骤**：
+    ref: https://blog.csdn.net/weixin_40604987/article/details/79296427
+
+- 将自变量的特征空间(即x^{(1)},x^{(2)},x^{(3)},...,x^{(p)})的可能取值构成的集合分割成J个互不重叠的区域R_1,R_2,...,R_j。        
+- 对落入区域R_j的每个观测值作相同的预测，预测值等于R_j上训练集的因变量的简单算术平均。 
+
+如下图所示，假如我们想要对楼内居民的年龄进行回归，将楼划分为3个区域 R1 , R2 , R3(红线),那么 R1的输出就是第一列四个居民年龄的平均值, R2的输出就是第二列四个居民年龄的平均值， R3的输出就是第三、四列八个居民年龄的平均值。
+![image](./1.png)
+
+1. 选择最优切分特征j与该特征上的最优切分点s
+遍历特征j以及固定j后遍历切分点s，选择使得下式最小的(j,s)
+
+![equation](https://latex.codecogs.com/gif.latex?min_{j,s}[min_{c_1}\sum\limits_{x_i\in&space;R_1(j,s)}(y_i-c_1)^2&space;&plus;&space;min_{c_2}\sum\limits_{x_i\in&space;R_2(j,s)}(y_i-c_2)^2&space;])
+
 
 
 
