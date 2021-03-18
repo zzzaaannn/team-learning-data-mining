@@ -199,14 +199,30 @@ parameters:
 - min_samples_split: The minimum number of samples required to split an internal node
 
 ```python
-    from sklearn.tree import DecisionTreeRegressor    
-    reg_tree = DecisionTreeRegressor(criterion = "mse")
-    reg_tree.fit(X,y)
-    reg_tree.score(X,y)
-    cross_val_score(regressor, X, y, cv=10)
+from sklearn.tree import DecisionTreeRegressor    
+reg_tree = DecisionTreeRegressor(criterion = "mse")
+reg_tree.fit(X,y)
+reg_tree.score(X,y)
+cross_val_score(regressor, X, y, cv=10)
 ```
 
 ### SVR 支持向量机回归
+
+落在$f(x)$的$\epsilon$邻域空间中的样本点不需要计算损失，这些都是预测正确的，其余的落在$\epsilon$邻域空间以外的样本才需要计算损失
+![jupyter](./1.10.png)
+
+**sklearn的调用**
+API-SVR: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html?highlight=svr#sklearn.svm.SVR
+
+```python
+from sklearn.svm import SVR
+from sklearn.preprocessing import StandardScaler     # 标准化数据
+from sklearn.pipeline import make_pipeline   # 使用管道，把预处理和模型形成一个流程
+
+reg_svr = make_pipeline(StandardScaler(), SVR(C=1.0, epsilon=0.2))
+reg_svr.fit(X, y)
+reg_svr.score(X,y)
+```
 
 
 
