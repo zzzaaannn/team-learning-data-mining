@@ -121,11 +121,11 @@ For example, if an input sample is two dimensional and of the form [a, b], the d
 
 **solution2**: GAM(广义可加模型) Generalized Additive Model
 
-an extension of generalized linear models
+an extension of generalized linear models,identify the link of the predictor and variables
+
+ref: https://multithreaded.stitchfix.com/blog/2015/07/30/gam/
 
 ![image](./1.png)
-
-identify the link of the predictor and variables
 
 ![equation](https://latex.codecogs.com/gif.latex?y_i&space;=&space;w_0&space;&plus;&space;\sum\limits_{j=1}^{p}f_{j}(x_{ij})&space;&plus;&space;\epsilon_i)
 
@@ -136,7 +136,7 @@ identify the link of the predictor and variables
 - 线性回归、线性分类模型都可适用
 
 - additive nature allows us to explore and interpret individual features by holding others at their mean
-ref: https://codeburst.io/pygam-getting-started-with-generalized-additive-models-in-python-457df5b4705f
+    ref: https://codeburst.io/pygam-getting-started-with-generalized-additive-models-in-python-457df5b4705f
 
 **sklearn的调用**
 API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
@@ -146,6 +146,11 @@ API-GAM: https://pygam.readthedocs.io/en/latest/api/api.html
     gam = LinearGAM().fit(X, y)
     gam.summary()
     gam.coef_
+
+
+### Regression Tree 回归树
+
+依据分层和分割的方式将特征空间划分为一系列简单的区域
 
 
 
