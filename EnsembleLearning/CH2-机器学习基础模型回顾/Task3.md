@@ -105,3 +105,5 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 
 ![equation](https://latex.codecogs.com/gif.latex?J(w)&space;=&space;\sum\limits_{i=1}^{N}(y_i-w_0-\sum\limits_{j=1}^{p}w_jx_{ij})^2&space;&plus;&space;\lambda\sum\limits_{j=1}^{p}|w_j|,&space;\lambda&space;\ge&space;0)
 
+左边为lasso，右边为岭回归
+![image](./1.20.png)  
