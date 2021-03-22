@@ -64,14 +64,18 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 ### selection criteria:
 
 **Cp**
+
 ![equation](https://latex.codecogs.com/gif.latex?C_p&space;=&space;\frac{1}{N}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
 其中 d=模型个数,
+
 ![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2$，$\hat{\sigma}^2)
 
 **AIC**
+
 ![equation](https://latex.codecogs.com/gif.latex?AIC&space;=&space;\frac{1}{d\hat{\sigma}^2}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
 
 **BIC**
+
 ![equation](https://latex.codecogs.com/gif.latex?BIC&space;=&space;\frac{1}{n}(RSS&space;&plus;&space;log(n)d\hat{\sigma}^2))
 
 ### cross validation
