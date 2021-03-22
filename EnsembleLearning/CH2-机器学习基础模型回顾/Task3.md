@@ -65,7 +65,8 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 
 **Cp**
 ![equation](https://latex.codecogs.com/gif.latex?C_p&space;=&space;\frac{1}{N}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
-其中 d=模型个数, ![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2$，$\hat{\sigma}^2)
+其中 d=模型个数,
+![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2$，$\hat{\sigma}^2)
 
 **AIC**
 ![equation](https://latex.codecogs.com/gif.latex?AIC&space;=&space;\frac{1}{d\hat{\sigma}^2}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
@@ -93,6 +94,10 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 其中，![equation](https://latex.codecogs.com/gif.latex?\lambda&space;\ge&space;0,\hat{w}&space;=&space;(X^TX&space;&plus;&space;\lambda&space;I)^{-1}X^TY)
 
 
+λ越大，惩罚的力度越大，系数则越趋近于0
+
+
 - Lasso(L1)
 
 ![equation](https://latex.codecogs.com/gif.latex?J(w)&space;=&space;\sum\limits_{i=1}^{N}(y_i-w_0-\sum\limits_{j=1}^{p}w_jx_{ij})^2&space;&plus;&space;\lambda\sum\limits_{j=1}^{p}|w_j|,&space;\lambda&space;\ge&space;0)
+
