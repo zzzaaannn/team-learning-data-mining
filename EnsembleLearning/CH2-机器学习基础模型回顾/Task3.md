@@ -40,4 +40,26 @@ ref: https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9
 
 **variance**: 同样大小的训练集的变动所导致的模型性能的变化，即数据变动带来的影响
 
-**noise**: 
+偏差度量的是单个模型的学习能力，而方差度量的是同一个模型在不同数据集上的稳定性.
+
+## Bias-Variance Dilemma
+
+ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
+
+一般来说，偏差与方差是有冲突的。
+
+![image](./5.png) 
+
+- dealing with bias and variance is about dealing with underfitting and overfitting. 
+
+- bias is reduced and variance is increased in relation to model complexity.
+
+- low variance (high bias) algorithms turn to be less complex, with simple or rigid underlying structure
+
+- low bias (high variance) algorithms turn to be more complex, with a flexible underlying structure
+
+
+## Model/Feature Selection
+
+
+
