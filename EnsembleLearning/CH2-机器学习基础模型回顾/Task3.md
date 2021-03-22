@@ -68,7 +68,7 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 ![equation](https://latex.codecogs.com/gif.latex?C_p&space;=&space;\frac{1}{N}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
 其中 d=模型个数,
 
-![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2$，$\hat{\sigma}^2)
+![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2)
 
 **AIC**
 
