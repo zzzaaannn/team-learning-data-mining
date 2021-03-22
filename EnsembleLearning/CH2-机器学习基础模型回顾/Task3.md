@@ -61,5 +61,38 @@ ref: https://towardsdatascience.com/bias-variance-dilemma-74e5f1f52b12
 
 ## Model/Feature Selection
 
+### selection criteria:
+
+**Cp**
+![equation](https://latex.codecogs.com/gif.latex?C_p&space;=&space;\frac{1}{N}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
+其中 d=模型个数, ![equation](https://latex.codecogs.com/gif.latex?RSS&space;=&space;\sum\limits_{i=1}^{N}(y_i-\hat{f}(x_i))^2$，$\hat{\sigma}^2)
+
+**AIC**
+![equation](https://latex.codecogs.com/gif.latex?AIC&space;=&space;\frac{1}{d\hat{\sigma}^2}(RSS&space;&plus;&space;2d\hat{\sigma}^2))
+
+**BIC**
+![equation](https://latex.codecogs.com/gif.latex?BIC&space;=&space;\frac{1}{n}(RSS&space;&plus;&space;log(n)d\hat{\sigma}^2))
+
+### cross validation
+
+- 先将数据集划分为k个大小相似的互斥子集，每个子集都尽可能保持数据分布的一致性
+
+- 每次用k-1个子集作为训练集，余下的那个子集作为测试集
+
+- 从而可进行k次训练和测试，最终返回的是这k个测试结果的均值
+
+### regularization
+
+对回归的系数进行约束或者加罚的技巧对p个特征的模型进行拟合，显著降低模型方差，这样也会提高模型的拟合效果
 
 
+- Ridge Regression(L2)
+
+![equation](https://latex.codecogs.com/gif.latex?J(w)&space;=&space;\sum\limits_{i=1}^{N}(y_i-w_0-\sum\limits_{j=1}^{p}w_jx_{ij})^2&space;&plus;&space;\lambda\sum\limits_{j=1}^{p}w_j^2)
+
+其中，![equation](https://latex.codecogs.com/gif.latex?\lambda&space;\ge&space;0,\hat{w}&space;=&space;(X^TX&space;&plus;&space;\lambda&space;I)^{-1}X^TY)
+
+
+- Lasso(L1)
+
+![equation](https://latex.codecogs.com/gif.latex?J(w)&space;=&space;\sum\limits_{i=1}^{N}(y_i-w_0-\sum\limits_{j=1}^{p}w_jx_{ij})^2&space;&plus;&space;\lambda\sum\limits_{j=1}^{p}|w_j|,&space;\lambda&space;\ge&space;0)
