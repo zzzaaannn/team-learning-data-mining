@@ -18,3 +18,12 @@
 
 ## Bias-Variance Decomposition
 
+![image](./3.png) 
+
+- (4) add and substract by E[f^hat(x)]
+
+- (5) expand
+
+- (6) pull f(x)-E[f^hat(x)] out of the expectation b/c it's a constant
+
+- (7) linearity of expectation
