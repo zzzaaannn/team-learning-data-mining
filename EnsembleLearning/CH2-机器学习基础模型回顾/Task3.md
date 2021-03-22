@@ -18,6 +18,8 @@
 
 ## Bias-Variance Decomposition
 
+![equation](https://latex.codecogs.com/gif.latex?E\left(y_{0}-\hat{f}\left(x_{0}\right)\right)^{2}=\operatorname{Var}\left(\hat{f}\left(x_{0}\right)\right)&plus;\left[\operatorname{Bias}\left(\hat{f}\left(x_{0}\right)\right)\right]^{2}&plus;\operatorname{Var}(\varepsilon))
+
 ![image](./3.png) 
 
 ![image](./4.png) 
