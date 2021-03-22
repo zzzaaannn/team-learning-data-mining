@@ -18,6 +18,9 @@
 
 ## Bias-Variance Decomposition
 
+ref: https://towardsdatascience.com/the-bias-variance-tradeoff-8818f41e39e9
+
+
 ![equation](https://latex.codecogs.com/gif.latex?E\left(y_{0}-\hat{f}\left(x_{0}\right)\right)^{2}=\operatorname{Var}\left(\hat{f}\left(x_{0}\right)\right)&plus;\left[\operatorname{Bias}\left(\hat{f}\left(x_{0}\right)\right)\right]^{2}&plus;\operatorname{Var}(\varepsilon))
 
 ![image](./3.png) 
@@ -31,3 +34,10 @@
 - (6) pull f(x)-E[f^hat(x)] out of the expectation b/c it's a constant
 
 - (7) linearity of expectation
+
+
+**bias**: 期望预测与真实值的偏离程度，即该模型/算法本身的拟合能力
+
+**variance**: 同样大小的训练集的变动所导致的模型性能的变化，即数据变动带来的影响
+
+**noise**: 
