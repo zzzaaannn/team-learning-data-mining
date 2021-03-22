@@ -20,6 +20,8 @@
 
 ![image](./3.png) 
 
+![image](./4.png) 
+
 - (4) add and substract by E[f^hat(x)]
 
 - (5) expand
