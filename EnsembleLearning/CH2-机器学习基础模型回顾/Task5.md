@@ -84,3 +84,35 @@ pyplot.legend()
 pyplot.show()
 ```
 ![jupyter](./7.png)
+
+4. F1
+
+基于查准率与查全率的调和评价(harmonic mean)定义
+
+![equation](https://latex.codecogs.com/gif.latex?F1&space;=&space;2\frac{PRE\times&space;REC}{PRE&space;&plus;&space;REC}=\frac{2\times&space;TP})
+
+
+5. ROC & AUC
+(to be continued)
+
+## Model
+
+1. Logistic Regression
+
+线性回归模型为 
+![equation](https://latex.codecogs.com/gif.latex?Y=\beta_0&plus;\beta_1&space;X)
+
+logistic函数为
+![equation](https://latex.codecogs.com/gif.latex?p(X)&space;=&space;\dfrac{e^{\beta_0&space;&plus;&space;\beta_1X}}{1&plus;e^{\beta_0&space;&plus;&space;\beta_1X}})
+
+
+![jupyter](./1.24.png)   
+
+(to be continued)
+
+
+2. Bayes
+
+3. Decision Tree
+
+4. SVM
