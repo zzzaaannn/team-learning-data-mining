@@ -97,7 +97,7 @@ pyplot.show()
 
 ## Model
 
-1. Logistic Regression
+### 1. Logistic Regression
 
 线性回归模型为 
 ![equation](https://latex.codecogs.com/gif.latex?Y=\beta_0&plus;\beta_1&space;X)
@@ -111,9 +111,12 @@ logistic函数为
 (to be continued)
 
 
-2. Bayes
+### 2. Bayes
 
-3. Decision Tree
+### 3. Decision Tree
+ref: https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/
+
+
 
 - Each root node represents a single input variable (x) and a split point on that variable.
 
@@ -129,4 +132,9 @@ logistic函数为
 
 - Tree construction ends using a **predefined stopping criterion**, such as a minimum number of training instances assigned to each leaf node of the tree.
 
-4. SVM
+#### Step 1: Split the input space
+
+e.g. recursive binary splitting 
+
+
+### 4. SVM
